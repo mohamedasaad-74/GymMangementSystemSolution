@@ -1,0 +1,44 @@
+﻿@model int 
+@{
+string pageTitle = "Route ";
+int age = 21;
+List<int>numbers = new List<int>(){1,2,3,4,5};
+}
+
+<h2>@Model</h2>
+
+<html>
+<head>
+    <title>@pageTitle</title>
+</head>
+<body>
+    <h1>Welcome to Route</h1>
+    <h2>@pageTitle</h2>
+    <h2>@age</h2>
+
+
+    <p>@age + 1</p> 
+    <p>@(age + 1)</p> 
+
+    @if (age >= 18)
+    {
+        <p>Adult</p>
+    }
+    else
+    {
+        <p>Under Age</p>
+    }
+    <ul>
+        @foreach (int n in numbers)
+        {
+            <li>number: @n</li>
+        }
+    </ul>
+    <a href="/Home/Index">Test link</a>
+
+    <a asp-controller="Home" asp-action="Index">Test Link</a>
+
+    <a asp-controller="Test" asp-action="Hamada" asp-route-id="5">Test Link</a>
+    <!-- html comment-->
+</body>
+</html>

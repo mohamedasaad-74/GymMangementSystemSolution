@@ -1,8 +1,41 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <!-- BACKEND: Everything outside <main class="content"> is the same on every page  -->
+    <!-- BACKEND: Page title · Route Gym -->
+    <title>Home Page · Route Gym</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- BACKEND: assets/ folder -->
+    <link rel="stylesheet" href="~/assets/bootstrap-icons/font/bootstrap-icons.min.css" />
+    <!-- BACKEND: assets/ folder -->
+    <link rel="stylesheet" href="~/assets/css/route.css" />
+</head>
+<body>
+    <div class="app">
+      
+
+            <!-- ==================== PAGE CONTENT: /Home/Index ==================== -->
+            <main class="content">
+
+                <div class="text-center">
+                    <h1 class="display-4">Welcome</h1>
+                    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+                </div>
+
+            </main>
+            <!-- ================== END PAGE CONTENT ================== -->
+        </div>
+    </div>
+
+    <!-- BACKEND: site.js  -->
+    
+</body>
+</html>
