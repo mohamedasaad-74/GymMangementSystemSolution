@@ -5,11 +5,16 @@ using System.Reflection;
 namespace GymMangementSystem.Context
 {
     public class GymDbContext : DbContext
+
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public GymDbContext(DbContextOptions options): base(options)
         {
-            optionsBuilder.UseSqlServer("Server=.;Database=GymG01;Trusted_connection=true;TrustServerCertificate=true"); 
+            
         }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer("Server=.;Database=GymG01;Trusted_connection=true;TrustServerCertificate=true"); 
+        //}
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
